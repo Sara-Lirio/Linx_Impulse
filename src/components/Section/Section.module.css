@@ -1,0 +1,15 @@
+
+.title {
+    text-align: center;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

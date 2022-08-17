@@ -4,11 +4,12 @@ import Input from '../Input/Input'
 import Label from '../Label/Label'
 import Subtitle from '../Subtitle/Subtitle'
 import Text from '../Text/Text'
+import style from './Form.module.css'
 
 const Form = () => {
   return (
-    <>
-      <div>
+    <section className={style.section}>
+      <article className={style.article}>
         <Subtitle subtitle='Ajude o algorítimo a ser mais certeiro' />
         <Text text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu 
@@ -25,8 +26,8 @@ const Form = () => {
         velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean 
         sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante 
         suscipit libero, at mattis augue est vel metus.'/>
-      </div>
-      <form>
+      </article>
+      <form className={style.forms}>
         <Label text='Seu nome:' />
         <Input type='text' />
 
@@ -36,15 +37,17 @@ const Form = () => {
         <Label text='CPF:' />
         <Input type='text' />
 
-        <Input type='radio' />
-        <Label text='Masculino' />
+        <div className={style.radio}>
+          <Input type='radio' />
+          <Label text='Masculino' />
 
-        <Input type='radio' />
-        <Label text='Feminino' />
+          <Input type='radio' />
+          <Label text='Feminino' />
+        </div>
 
         <Button text='Enviar' />
       </form>
-    </>
+    </section>
   )
 }
 

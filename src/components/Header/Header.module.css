@@ -1,0 +1,9 @@
+.header{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 25em;
+}

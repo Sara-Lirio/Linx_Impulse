@@ -7,10 +7,12 @@ import Section from './components/Section/Section'
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Form/>
-      <Section/>
-      <Footer/>
+      <Header />
+      <main className='main'>
+        <Form />
+        <Section />
+      </main>
+      <Footer />
     </div>
   )
 }
