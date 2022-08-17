@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Text = () => {
+const Text = ({text}) => {
   return (
     <div>
-        
+        <p>{text}</p>
     </div>
   )
 }
