@@ -1,9 +1,10 @@
 import React from 'react'
+import style from './Text.module.css'
 
 const Text = ({text}) => {
   return (
     <div>
-        <p>{text}</p>
+        <p className={style.text}>{text}</p>
     </div>
   )
 }

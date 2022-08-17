@@ -7,7 +7,7 @@ import style from './Header.module.css'
 
 const Header = () => {
   return (
-    <div className={style.header}>
+    <header className={style.header}>
       <Subtitle subtitle='uma seleção de produtos' />
       <Title title='especial para você' />
       <Text text='Todos os produtos desta lista foram selecionados a partir de sua navegação. Aproveite!'/>
@@ -18,7 +18,11 @@ const Header = () => {
         <Button text='Seus produtos'></Button>
         <Button text='Compartilhe'></Button>
       </div>
-    </div>
+      <div className={style.triangulediv}>
+        <div className={style.triangule}></div>
+      </div>
+    
+    </header>
   )
 }
 
