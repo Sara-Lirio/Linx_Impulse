@@ -3,19 +3,16 @@ import Button from '../Button/Button'
 import Input from '../Input/Input'
 import Label from '../Label/Label'
 import Product from '../Product/Product'
-import Subtitle from '../Subtitle/Subtitle'
+
 import Text from '../Text/Text'
+import TitleSection from '../Title/TitleSection'
 import style from './Section.module.css'
 
 const Section = () => {
   return (
     <>
       <section className={style.section}>
-        <div className={style.title}>
-          <div className={style.subtitle}>
-            <Subtitle subtitle='Sua seleção especial' />
-          </div>
-        </div>
+        <TitleSection title='Sua seleção especial' />
         <section className={style.products}>
           <Product name='Nome do Produto' description='Descrição do produto 
         um pouco maior, com duas linhas ou três que explica melhor do que se trata.'
@@ -37,11 +34,9 @@ const Section = () => {
 
 
       <section className={style.share}>
-        <div className={style.title}>
-          <Subtitle subtitle='Compartilhe a novidade' />
-        </div>
-        <Text text='Quer que seus amigos também ganhem a lista 
-       personalizada deles? Preencha agora!' />
+        <TitleSection title='Compartilhe a novidade' />
+        <p className={style.textShare}>Quer que seus amigos também ganhem a lista 
+       personalizada deles? Preencha agora!</p>
         <form className={style.forms}>
           <div className={style.name}>
             <Label text='Nome do seu amigo:' />
@@ -52,8 +47,9 @@ const Section = () => {
             <Input type='email' />
           </div>
         </form>
-
+        <div className={style.buttonSection}>
         <Button text='Enviar agora' />
+        </div>
       </section>
     </>
   )

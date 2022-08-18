@@ -2,3 +2,23 @@
     font-size: 40px;
     padding-bottom: 24px;
 }
+
+.titleSection {
+    font-size: 18px;
+    width: 215px;
+    margin: auto;
+    font-weight: 600;
+    color:#888888;
+    background-color: white;
+}
+
+.titleLine {
+    text-align: center;
+    margin: 50px auto 20px auto;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(#707070,#707070);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 center;
+}
