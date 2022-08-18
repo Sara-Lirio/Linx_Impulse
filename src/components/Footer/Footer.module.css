@@ -1,3 +1,19 @@
 .footer{
     text-align: center;
+    color: white;
+    background-color: #707070;
+    height: 290px;
+    width: auto
+}
+
+.triangulediv{
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 99vw solid transparent;
+    border-top: 120px solid white;
+}
+
+.text {
+    margin-top: 40px;
 }
