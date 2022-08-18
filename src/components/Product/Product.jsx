@@ -1,19 +1,19 @@
 import React from 'react'
-import Button from '../Button/Button'
-import Subtitle from '../Subtitle/Subtitle'
-import Text from '../Text/Text'
+import style from './Product.module.css'
 
-const Product = () => {
+const Product = ({name,description,price, currentPrice, parcel, installmentePrice}) => {
   return (
-    <div>
-        <picture>
-
+    <div className={style.product}>
+        <picture className={style.picture}>
+            <div></div>
         </picture>
-        <Subtitle subtitle='Nome do Produto'/>
-        <Text text='Descrição do produto um pouco maior, 
-        com duas linhas ou três que explica melhor do que se trata.'/>
-        
-        <Button text='Comprar'/>
+        <p className={style.name}>{name}</p>
+        <p className={style.description}>{description}</p>
+        <p className={style.description}>De: R${price}</p>
+        <p className={style.currentPrice}>Por:R${currentPrice}</p>
+        <p className={style.description}>ou {parcel} de R${installmentePrice}</p>
+
+        <button className={style.button}>Comprar</button>
     </div>
   )
 }
