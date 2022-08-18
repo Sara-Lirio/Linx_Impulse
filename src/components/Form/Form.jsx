@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 import Input from '../Input/Input'
+import InputRadio from '../Input/InputRadio'
 import Label from '../Label/Label'
 import Subtitle from '../Subtitle/Subtitle'
 import Text from '../Text/Text'
@@ -27,7 +28,9 @@ const Form = () => {
         sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante 
         suscipit libero, at mattis augue est vel metus.'/>
       </article>
+
       <form className={style.forms}>
+      <div className={style.divform}>
         <Label text='Seu nome:' />
         <Input type='text' />
 
@@ -36,12 +39,12 @@ const Form = () => {
 
         <Label text='CPF:' />
         <Input type='text' />
-
+      </div>
         <div className={style.radio}>
-          <Input type='radio' />
+          <InputRadio/>
           <Label text='Masculino' />
-
-          <Input type='radio' />
+          
+          <InputRadio/>
           <Label text='Feminino' />
         </div>
 

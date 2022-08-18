@@ -1,13 +1,38 @@
 .section {
     display: flex;
-    align-items: center;
+    align-items:flex-start;
+    align-content: space-between;
+    justify-content: space-between;
+    color:#888888;
+    height: 300px;
+    margin-bottom: 70px;
 }
 
 .radio {
     display: flex;
+    justify-content: space-around;
+    width: 162px;
+    margin-bottom: 23px;
 }
 
 .forms {
     display: flex;
     flex-direction: column;
+    align-content: space-between;
+    width: 340px;
+}
+
+.article {
+    width: 520px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
 }

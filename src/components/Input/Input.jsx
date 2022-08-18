@@ -1,9 +1,10 @@
 import React from 'react'
+import style from './Input.module.css'
 
 const Input = ({type}) => {
   return (
     <div>
-        <input type={type}></input>
+        <input className={style.input} type={type}></input>
     </div>
   )
 }

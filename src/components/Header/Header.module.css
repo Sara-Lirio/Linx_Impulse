@@ -5,12 +5,14 @@
     align-items: center;
     background-color: #707070;
     color: white;
+    padding-top: 2.5em;
 }
 
 .buttons{
     display: flex;
     justify-content: space-between;
     width: 769px;
+    padding-top: 50px;
 }
 
 .triangulediv {
@@ -24,5 +26,9 @@
     border-left: 0px solid transparent;
     border-right: 99vw solid transparent;
     border-bottom: 100px solid white;
+}
+
+.text{
+    font-size: 14px;
 }
 
