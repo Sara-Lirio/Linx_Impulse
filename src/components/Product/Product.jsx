@@ -1,11 +1,12 @@
 import React from 'react'
+import RandomUser from '../RandomUser/RandomUser'
 import style from './Product.module.css'
 
-const Product = ({name,description,price, currentPrice, parcel, installmentePrice}) => {
+const Product = ({image, name,description,price, currentPrice, parcel, installmentePrice}) => {
   return (
     <div className={style.product}>
         <picture className={style.picture}>
-            <div></div>
+          {image}
         </picture>
         <p className={style.name}>{name}</p>
         <p className={style.description}>{description}</p>
