@@ -4,7 +4,7 @@ import style from './Product.module.css'
 const Product = ({products}) => {
   return (
     <>
-      {/* {products.map(product => {
+      {products.map(product => {
           return (
             <div key={product.id} className={style.product}>
               <picture className={style.picture}>
@@ -16,11 +16,11 @@ const Product = ({products}) => {
               <p className={style.currentPrice}>Por: R$ {product.price},00</p>
               <p className={style.description}>ou {product.installments.count} de R$ {product.installments.value}</p>
 
-              <button className={style.button}>Comprar</button>
+              <button className={style.button} >Comprar</button>
             </div>
           )
         })
-      } */}
+      }
     </>
   )
 }
