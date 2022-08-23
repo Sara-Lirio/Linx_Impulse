@@ -1,21 +1,27 @@
 import React from 'react'
-import RandomUser from '../RandomUser/RandomUser'
 import style from './Product.module.css'
 
-const Product = ({image, name,description,price, currentPrice, parcel, installmentePrice}) => {
+const Product = ({products}) => {
   return (
-    <div className={style.product}>
-        <picture className={style.picture}>
-          {image}
-        </picture>
-        <p className={style.name}>{name}</p>
-        <p className={style.description}>{description}</p>
-        <p className={style.description}>De: R${price}</p>
-        <p className={style.currentPrice}>Por:R${currentPrice}</p>
-        <p className={style.description}>ou {parcel} de R${installmentePrice}</p>
+    <>
+      {/* {products.map(product => {
+          return (
+            <div key={product.id} className={style.product}>
+              <picture className={style.picture}>
+                <img src={product.image} alt='product' />
+              </picture>
+              <p className={style.name}>{product.name}</p>
+              <p className={style.description}>{product.description}</p>
+              <p className={style.description}>De: R$ {product.oldPrice},00</p>
+              <p className={style.currentPrice}>Por: R$ {product.price},00</p>
+              <p className={style.description}>ou {product.installments.count} de R$ {product.installments.value}</p>
 
-        <button className={style.button}>Comprar</button>
-    </div>
+              <button className={style.button}>Comprar</button>
+            </div>
+          )
+        })
+      } */}
+    </>
   )
 }
 
