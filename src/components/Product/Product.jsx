@@ -1,7 +1,8 @@
 import React from 'react'
 import style from './Product.module.css'
 
-const Product = ({products}) => {
+const Product = ({products, onclick}) => {
+
   return (
     <>
       {products.map(product => {
@@ -16,7 +17,7 @@ const Product = ({products}) => {
               <p className={style.currentPrice}>Por: R$ {product.price},00</p>
               <p className={style.description}>ou {product.installments.count} de R$ {product.installments.value}</p>
 
-              <button className={style.button} >Comprar</button>
+              <button className={style.button} onClick={onclick}>Comprar</button>
             </div>
           )
         })

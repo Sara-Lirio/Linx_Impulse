@@ -12,46 +12,40 @@ const Section = () => {
   const [nextPage, setNextPage] = useState(url)
 
   async function handleReq() {
-    const response = await fetch(url)
+    const response = await fetch(nextPage)
     const json = await response.json()
-    console.log(json.products)
     const results = json.products
     return results
   }
 
-  const handlePage = async () => {
-    const response = await fetch(url);
-    const result = response.json();
-    const urlPage = await result(nextPage);
-    return `https://${urlPage.nextPage}`
+  const handlePage = () => {
+    console.log('Carregar mais produtos');
+    setNextPage(nextPage)
   }
-
-
+ 
   useEffect(() => {
     const effect = async () => {
       setInfo(await handleReq())
-      setNextPage(await handlePage())
+  
     }
     effect()
   }, [])
 
-  useEffect(() => {
-    const newPage = async () => {
-      setNextPage(await handlePage());
-    }
-    newPage();
-  }), [info];
-
+ const alerta = () => {
+  alert('Produto adicionado no carrinho com sucesso')
+ }
+   
   return (
     <>
       <section className={style.section}>
         <TitleSection title='Sua seleção especial' />
         <section className={style.products}>
 
-        <Product products={info} />
+        <Product products={info} onclick={alerta}/>
         </section>
         <div className={style.buttonSection}>
-          <Button text='Ainda mais produtos aqui!' />
+          <Button text='Ainda mais produtos aqui!' type='secondary'
+           onclick={handlePage}/>
         </div>
       </section>
 
