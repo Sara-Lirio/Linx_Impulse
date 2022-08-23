@@ -44,7 +44,7 @@ const Section = () => {
           </div>
           <div className={style.email}>
             <Label text='E-mail:' />
-            <Input type='email' />
+            <Input type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' />
           </div>
         </form>
         <div className={style.buttonSection}>

@@ -35,13 +35,13 @@ const Form = () => {
         <Input type='text' />
 
         <Label text='E-mail:' />
-        <Input type='email' />
+        <Input type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' />
 
         <Label text='CPF:' />
-        <Input type='text' />
+        <Input type='text' pattern='^[0-9]{11}$'/>
       </div>
         <div className={style.radio}>
-          <InputRadio/>
+          <InputRadio />
           <Label text='Masculino' />
           
           <InputRadio/>
